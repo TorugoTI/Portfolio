@@ -1,0 +1,251 @@
+/* Resetando propriedades padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo modo inicial (light-mode) */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-mode {
+    background-color: #141414;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Logo */
+.navbar .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo a .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Ajuste para centralizar os links de navegação na Navbar */
+.navbar-links {
+    display: flex;
+    justify-content: center; /* Centraliza os itens de navegação */
+    gap: 20px; /* Espaçamento entre os links */
+    flex-grow: 1;
+}
+
+.navbar-links ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar-links ul li {
+    margin-right: 20px;
+}
+
+.navbar-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-links ul li a:hover {
+    color: #e50914;
+}
+
+/* Container do botão de alternância e os links */
+.mode-toggle-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinha o botão à direita */
+    margin-right: 10px;
+}
+
+/* Botão de alternância de modo IOS */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Tamanho reduzido */
+    height: 28px; /* Tamanho reduzido */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px; /* Tamanho reduzido */
+    width: 22px; /* Tamanho reduzido */
+    border-radius: 50px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+/* Seções ocultas */
+.hidden-section {
+    display: none;
+    padding: 20px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+/* Cartela de Projetos estilo Netflix */
+.projects-carousel {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-card p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+/* Ajustes de visibilidade dos links no modo light */
+.light-mode .social-links a {
+    color: #007bff; /* Azul para links visíveis no modo claro */
+}
+
+.light-mode .social-links a:hover {
+    color: #0056b3; /* Azul escuro para links ao passar o mouse */
+}
+/* Imagens no menu de contatos */
+.social-links img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* Logo do perfil */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px; /* Espaço entre a imagem e o nome */
+}
+
+/* Outras imagens */
+#portfolio img, .social-links img {
+    width: 50px;
+    vertical-align: middle;
+}
+/* Estilos para centralizar os links de contato e modificar o texto no dark mode */
+.social-links {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espaço entre os links e o título "Contatos" */
+}
+
+.social-links a {
+    display: block;  /* Garante que os links ocupem uma linha inteira */
+    margin-bottom: 10px;  /* Espaço entre os links */
+    color: white;  /* Cor padrão dos links no modo claro */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Estilos para links quando o modo dark estiver ativo */
+.dark-mode .social-links a {
+    color: #e50914;  /* Cor vermelha no modo dark */
+}
+
+/* Estilos para links quando o modo claro estiver ativo */
+.light-mode .social-links a {
+    color: #0000FF;  /* Cor azul no modo claro, para destaque */
+}
+
+/* Alinhamento dos ícones com os textos */
+.social-links img {
+    width: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Alteração da cor dos links no hover */
+.social-links a:hover {
+    color: #ff3333;  /* Mudança para um tom mais claro de vermelho no hover */
+}
