@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Hugo - Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="logo">
+            <!-- Link clicável que leva ao início da página -->
+            <a href="#" onclick="showHome()">
+                <!-- Foto de perfil local -->
+                <img src="images/logo.png" alt="Foto de Victor Hugo" class="profile-img">
+                VICTOR HUGO PEREIRA SILVA
+            </a>
+        </div>
+        <nav class="navbar-links">
+            <ul>
+                <li><a href="#" class="nav-link" onclick="showSection('portfolio')">Portfólio</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('projetos')">Projetos</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('contatos')">Contatos</a></li>
+            </ul>
+        </nav>
+        <!-- Botão de alternância de tema -->
+        <div class="mode-toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="mode-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Página Inicial -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Bem-vindo ao meu Portfólio</h1>
+            <p>Veja meus projetos e minha experiência como desenvolvedor Full-Stack.</p>
+            <button class="btn" onclick="showSection('portfolio')">Ir para o Portfólio</button>
+        </div>
+    </section>
+
+    <!-- Section: Projetos -->
+    <section class="hidden-section" id="projetos">
+        <h2>Projetos</h2>
+        <p>Aqui estão alguns dos meus projetos mais recentes:</p>
+        <ul>
+            <li><a href="https://link-do-projeto-1.com" target="_blank">Projeto 1</a></li>
+            <li><a href="https://link-do-projeto-2.com" target="_blank">Projeto 2</a></li>
+            <li><a href="https://link-do-projeto-3.com" target="_blank">Projeto 3</a></li>
+        </ul>
+    </section>
+
+    <!-- Section: Contatos -->
+    <section class="hidden-section" id="contatos">
+        <h2>Contatos</h2>
+        <p>Entre em contato comigo através das minhas redes sociais:</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/victor-hugo-pereira-silva-059527235/" target="_blank">
+                <img src="images/linkedin-logo.png" alt="LinkedIn"> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/victor.ti.pereira/" target="_blank">
+                <img src="images/instagram-logo.png" alt="Instagram"> Instagram
+            </a>
+            <a href="https://github.com/TorugoTI?tab=repositories" target="_blank">
+                <img src="images/github-logo.png" alt="GitHub"> GitHub
+            </a>
+            <a href="https://abrir.link/JyZhB" target="_blank">
+                <img src="images/canva-logo.png" alt="Currículo"> Currículo
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Section: Portfólio -->
+    <section class="hidden-section" id="portfolio">
+        <h2>Sobre Mim</h2>
+        <p>Sou um programador Full-Stack com experiência em várias tecnologias...</p>
+        <p>Minha experiência inclui o desenvolvimento de aplicações web usando tecnologias como JavaScript, React, Node.js, e banco de dados como MongoDB e SQL.</p>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
